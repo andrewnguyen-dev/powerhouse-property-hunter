@@ -1,10 +1,12 @@
 import { Inter } from "next/font/google";
 import { Geologica } from "next/font/google";
+import { Lato } from "next/font/google";
 import "../globals.css";
 import SideNavbar from "@/components/side-navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 const geologica = Geologica({ subsets: ["latin"], variable: "--font-geologica" });
+
 
 export default function WithNavbarLayout({
   children,
