@@ -74,7 +74,7 @@ main {
 }
 
 h1 {
-  @apply text-4xl md:text-[10rem] uppercase font-extrabold mb-10 font-geologica tracking-tighter;
+  @apply text-[6rem] sm:text-[8rem] md:text-[9rem] lg:text-[10rem] uppercase font-extrabold mb-10 font-geologica tracking-tighter transition-all duration-300;
 }
 
 ::view-transition-group(root) {

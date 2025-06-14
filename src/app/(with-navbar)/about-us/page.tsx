@@ -67,19 +67,17 @@ const AboutSection = () => {
     <main id="about" className="section bg-white text-primary">
       <h1>About</h1>
       <div className="section-inner flex flex-col gap-48">
-        <section className="flex flex-col md:flex-row">
+        <section className="flex flex-col lg:flex-row">
           {/* Andrew photo container */}
-          <div className='flex-1 flex flex-col gap-4 p-12 border border-black/10 -ml-12 hover:bg-gray-50 transition-all duration-300'>
-            <div className="overflow-hidden rounded-xs">
-              <Image
+          <div className='flex-1 flex order-last lg:order-first flex-col gap-4 p-12 border border-black/10 -mx-6 md:-mx-12 lg:mr-0 hover:bg-gray-50 transition-all duration-300'>
+            <div className=" overflow-hidden rounded-xs flex justify-center items-center">
+              <img
                 src="/andrew-profile-picture-2.jpg"
                 alt="Andrew profile"
-                width={500}
-                height={500}
-                className="aspect-square object-cover rounded-xs filter grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+                className="max-w-1/2 lg:max-w-full aspect-square object-cover rounded-xs filter grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
               />
             </div>
-            <div className='flex flex-col justify-center items-center'>
+            <div className='flex flex-col order-first lg:order-last justify-center items-center'>
               <p className='uppercase font-bold text-black/70 text-center'>Andrew Blake</p>
               <ul className='text-black/50 text-sm'>
                 <li><span className="mr-2">•</span>Diploma of Design & Architecture at UTS</li>
@@ -89,8 +87,8 @@ const AboutSection = () => {
             </div>
           </div>
           {/* Hero text container */}
-          <div className="flex-2 flex flex-col justify-center items-center gap-12 p-12 border-b border-t border-r border-black/10 -mr-12 hover:bg-gray-50 transition-all duration-300">
-            <p className={`${alegreya.className} text-6xl/15 font-medium tracking-tight`}>
+          <div className="flex-3 xl:flex-2 flex flex-col justify-center items-center gap-12 p-12 border-b border-t border-r border-black/10 -mx-6 md:-mx-12 lg:ml-0 hover:bg-gray-50 transition-all duration-300">
+            <p className={`${alegreya.className} text-5xl xl:text-6xl/15 font-medium tracking-tight`}>
               At Powerhouse Property Hunter our mission is to curate the right mix of <span className='low-highlight'>Medical, Healthcare & Wellness</span> properties and deliver
               expert buyer agency services tailored to your goals.
             </p>
@@ -133,11 +131,7 @@ const AboutSection = () => {
           </div>
         </section>
 
-        <Marquee className='[--duration:24s] border-t-1 border-b-1 -mx-12 py-4'>
-          {/* <span>Next.js</span>
-          <span>React</span>
-          <span>TypeScript</span>
-          <span>Tailwind CSS</span> */}
+        <Marquee className='[--duration:24s] border-t-1 -mx-6 md:-mx-12 border-b-1 py-4'>
           <a href="/contact-us" className={`${alegreya.className} text-6xl italic`}>Looking for your perfect property? Let&apos;s chat!</a>
         </Marquee>
 
@@ -149,9 +143,10 @@ const AboutSection = () => {
                 key={offering.title}
                 className="group pb-3 relative"
               >
-                <h4 className="text-6xl uppercase font-extrabold mb-2 font-geologica">{offering.title}</h4>
+                <h4 className="text-4xl lg:text-6xl uppercase font-extrabold mb-2 font-geologica">{offering.title}</h4>
                 <p className="text-gray-600">{offering.description}</p>
-                {/* Animated border */}
+                {// Animated borders
+                }
                 <span
                   className="pointer-events-none absolute left-0 bottom-0 h-[1px] w-full bg-black/20 overflow-hidden"
                   aria-hidden="true"
@@ -165,8 +160,7 @@ const AboutSection = () => {
           </div>
         </section>
 
-        {/* <TextReveal>Trusted by medical professionals. Backed by experience. Proven by results.</TextReveal> */}
-
+        <TextReveal>Trusted by medical professionals. Backed by experience. Proven by results.</TextReveal>
 
         <section>
           <h3 className='text-center uppercase text-3xl font-bold mb-12'>Meet the Team</h3>
