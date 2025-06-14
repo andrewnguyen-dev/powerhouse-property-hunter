@@ -126,7 +126,7 @@ const PortfolioSection = () => {
   const secondRow = portfolioItems.slice(half);
 
   return (
-    <section id="portfolio" className="section bg-white text-primary">
+    <main id="portfolio" className="section bg-white text-primary">
       <div className="section-inner">
         <h1>Our Portfolio</h1>
         <div id="portfolio-items" className="flex flex-col gap-4 max-w-full">
@@ -134,7 +134,7 @@ const PortfolioSection = () => {
           <CarouselRow items={secondRow} direction={-1} speed={60} />
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

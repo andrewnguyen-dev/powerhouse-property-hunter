@@ -17,7 +17,7 @@ export default function IndexPageLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
-        <main>{children}</main>
+        <div>{children}</div>
       </body>
     </html>
   );

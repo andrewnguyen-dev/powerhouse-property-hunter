@@ -12,10 +12,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { Marquee } from '@/components/magicui/marquee';
+import ScrollReveal from '@/components/react-bits/scroll-reveal';
+import { TextReveal } from "@/components/magicui/text-reveal";
 
 const lato = Lato({ subsets: ["latin"], variable: "--font-lato", weight: ["100", "300", "400", "700", "900"] });
 const workSans = Work_Sans({ subsets: ["latin"], variable: "--font-work-sans"});
-const alegreya = Alegreya({ subsets: ["latin"], variable: "--font-alegreya" });
+const alegreya = Alegreya({ subsets: ["latin"], style: ["normal","italic"] });
 
 const offerings = [
   {
@@ -36,21 +39,44 @@ const offerings = [
   },
 ]
 
+const teamMembers = [
+  {
+    name: 'Andrew Blake',
+    position: 'Founder & Lead Buyers Agent',
+    image: '/our-team/1.jpg',
+  },
+  {
+    name: 'Sarah Lee',
+    position: 'Senior Property Analyst',
+    image: '/our-team/2.jpg',
+  },
+  {
+    name: 'Michael Chen',
+    position: 'Client Relations Manager',
+    image: '/our-team/3.jpg',
+  },
+  {
+    name: 'Emily Carter',
+    position: 'Research & Marketing',
+    image: '/our-team/4.png',
+  },
+];
+
 const AboutSection = () => {
   return (
-    <section id="about" className="section bg-white text-primary">
+    <main id="about" className="section bg-white text-primary">
       <h1>About</h1>
-      <div className="section-inner">
-        <div className="flex mb-24">
+      <div className="section-inner flex flex-col gap-48">
+        <section className="flex flex-col md:flex-row">
           {/* Andrew photo container */}
           <div className='flex-1 flex flex-col gap-4 p-12 border border-black/10 -ml-12 hover:bg-gray-50 transition-all duration-300'>
-            <div className="overflow-hidden rounded-sm">
+            <div className="overflow-hidden rounded-xs">
               <Image
                 src="/andrew-profile-picture-2.jpg"
                 alt="Andrew profile"
                 width={500}
                 height={500}
-                className="aspect-square object-cover rounded-sm filter grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
+                className="aspect-square object-cover rounded-xs filter grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
               />
             </div>
             <div className='flex flex-col justify-center items-center'>
@@ -65,7 +91,7 @@ const AboutSection = () => {
           {/* Hero text container */}
           <div className="flex-2 flex flex-col justify-center items-center gap-12 p-12 border-b border-t border-r border-black/10 -mr-12 hover:bg-gray-50 transition-all duration-300">
             <p className={`${alegreya.className} text-6xl/15 font-medium tracking-tight`}>
-              At Powerhouse Property Hunter our mission is to curate the right mix of Medical, Healthcare & Wellness properties and deliver
+              At Powerhouse Property Hunter our mission is to curate the right mix of <span className='low-highlight'>Medical, Healthcare & Wellness</span> properties and deliver
               expert buyer agency services tailored to your goals.
             </p>
             <Dialog>
@@ -104,13 +130,18 @@ const AboutSection = () => {
                 </DialogHeader>
               </DialogContent>
             </Dialog>
-            
           </div>
-          <div className='hidden'>
-            
-          </div>
-        </div>
-        <div>
+        </section>
+
+        <Marquee className='[--duration:24s] border-t-1 border-b-1 -mx-12 py-4'>
+          {/* <span>Next.js</span>
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Tailwind CSS</span> */}
+          <a href="/contact-us" className={`${alegreya.className} text-6xl italic`}>Looking for your perfect property? Let&apos;s chat!</a>
+        </Marquee>
+
+        <section>
           <h3 className="text-xl inline-block text-black/50 font-medium mb-4 uppercase hover:text-black/70 transition-all duration-300">The Offering</h3>
           <div className="flex flex-col gap-4">
             {offerings.map((offering) => (
@@ -132,9 +163,38 @@ const AboutSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </section>
+
+        {/* <TextReveal>Trusted by medical professionals. Backed by experience. Proven by results.</TextReveal> */}
+
+
+        <section>
+          <h3 className='text-center uppercase text-3xl font-bold mb-12'>Meet the Team</h3>
+          <div
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 -mx-12 gap-0 border border-black/10"
+            style={{ borderCollapse: 'collapse' }}
+          >
+            {teamMembers.map((member) => (
+              <div
+                key={member.name}
+                className="flex flex-col items-center border-black/10 border
+                  py-6 bg-white"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-50 h-50 object-cover mb-4"
+                />
+                <div className="text-center">
+                  <p className="font-bold text-lg">{member.name}</p>
+                  <p className="text-sm text-black/60">{member.position}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </div>
-    </section>
+    </main>
   );
 };
 

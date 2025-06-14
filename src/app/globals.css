@@ -42,6 +42,24 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
 
 /* @media (prefers-color-scheme: light) {
@@ -51,7 +69,7 @@
   }
 } */
 
-section {
+main {
   @apply p-6 md:p-12;
 }
 
@@ -155,4 +173,10 @@ h1 {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.low-highlight {
+  @apply bg-gradient-to-t from-teal-400 to-teal-400 bg-no-repeat;
+  background-size: 100% 35%;
+  background-position: 0 65%;
 }

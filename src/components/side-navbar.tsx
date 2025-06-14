@@ -10,7 +10,7 @@ const oswald = Oswald({ subsets: ["latin"] });
 const SideNavbar = () => {
   const pathname = usePathname();
   return (
-    <ul className={`${oswald.className} font-medium text-xl w-0 opacity-0 sm:opacity-100 sm:w-40 sm:pl-5 sm:pb-12 md:text-2xl md:w-64 md:pl-12 uppercase transition-all duration-300`}>
+    <ul className={`${oswald.className} w-0 text-xl font-medium uppercase opacity-0 transition-all duration-300 sm:w-40 sm:pb-12 sm:pl-5 sm:opacity-100 md:w-48 md:pl-8 md:text-[1.375rem] lg:text-2xl lg:w-64 lg:pl-12`}>
       <li>
         <Link href="/" className='text-white opacity-50 hover:opacity-80 text-[18px]'>{`<`} Back</Link>
       </li>
