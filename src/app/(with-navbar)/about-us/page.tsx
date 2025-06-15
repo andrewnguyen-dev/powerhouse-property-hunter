@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from 'next/image'
 import { LuArrowRight } from "react-icons/lu";
 import { Lato } from "next/font/google";
 import { Work_Sans } from "next/font/google";
@@ -12,9 +11,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { Marquee } from '@/components/magicui/marquee';
+import Marquee from "react-fast-marquee";
 import ScrollReveal from '@/components/react-bits/scroll-reveal';
 import { TextReveal } from "@/components/magicui/text-reveal";
+import { GiFlake } from "react-icons/gi";
 
 const lato = Lato({ subsets: ["latin"], variable: "--font-lato", weight: ["100", "300", "400", "700", "900"] });
 const workSans = Work_Sans({ subsets: ["latin"], variable: "--font-work-sans"});
@@ -131,8 +131,8 @@ const AboutSection = () => {
           </div>
         </section>
 
-        <Marquee className='[--duration:24s] border-t-1 -mx-6 md:-mx-12 border-b-1 py-4'>
-          <a href="/contact-us" className={`${alegreya.className} text-6xl italic`}>Looking for your perfect property? Let&apos;s chat!</a>
+        <Marquee autoFill={true} className="border-t-1 border-b-1 py-4 -mx-6 md:-mx-12 !w-[calc(100%+3rem)] md:!w-[calc(100%+6rem)]">
+          <a href="/contact-us" className={`${alegreya.className} text-6xl italic mr-3`}>Looking for your perfect property? Let&apos;s chat!</a>
         </Marquee>
 
         <section>
