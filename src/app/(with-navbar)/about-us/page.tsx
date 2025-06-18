@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { LuArrowRight } from "react-icons/lu";
-import { Lato } from "next/font/google";
-import { Work_Sans } from "next/font/google";
 import { Alegreya } from "next/font/google";
 import {
   Dialog,
@@ -22,8 +20,6 @@ const demoItems = [
   { link: '#', text: 'Kiwi Dog', image: '/our-team/4.png' }
 ];
 
-const lato = Lato({ subsets: ["latin"], variable: "--font-lato", weight: ["100", "300", "400", "700", "900"] });
-const workSans = Work_Sans({ subsets: ["latin"], variable: "--font-work-sans"});
 const alegreya = Alegreya({ subsets: ["latin"], style: ["normal","italic"] });
 
 const offerings = [
@@ -45,28 +41,28 @@ const offerings = [
   },
 ]
 
-const teamMembers = [
-  {
-    name: 'Andrew Blake',
-    position: 'Founder & Lead Buyers Agent',
-    image: '/our-team/1.jpg',
-  },
-  {
-    name: 'Sarah Lee',
-    position: 'Senior Property Analyst',
-    image: '/our-team/2.jpg',
-  },
-  {
-    name: 'Michael Chen',
-    position: 'Client Relations Manager',
-    image: '/our-team/3.jpg',
-  },
-  {
-    name: 'Emily Carter',
-    position: 'Research & Marketing',
-    image: '/our-team/4.png',
-  },
-];
+// const teamMembers = [
+//   {
+//     name: 'Andrew Blake',
+//     position: 'Founder & Lead Buyers Agent',
+//     image: '/our-team/1.jpg',
+//   },
+//   {
+//     name: 'Sarah Lee',
+//     position: 'Senior Property Analyst',
+//     image: '/our-team/2.jpg',
+//   },
+//   {
+//     name: 'Michael Chen',
+//     position: 'Client Relations Manager',
+//     image: '/our-team/3.jpg',
+//   },
+//   {
+//     name: 'Emily Carter',
+//     position: 'Research & Marketing',
+//     image: '/our-team/4.png',
+//   },
+// ];
 
 const AboutSection = () => {
   return (
