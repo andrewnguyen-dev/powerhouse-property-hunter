@@ -12,9 +12,15 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import Marquee from "react-fast-marquee";
-import ScrollReveal from '@/components/react-bits/scroll-reveal';
+import FlowingMenu from "@/components/react-bits/flowing-menu";
 import { TextReveal } from "@/components/magicui/text-reveal";
-import { GiFlake } from "react-icons/gi";
+
+const demoItems = [
+  { link: '#', text: 'Andrew | CEO', image: '/our-team/1.jpg' },
+  { link: '#', text: 'Anita Wood', image: '/our-team/2.jpg' },
+  { link: '#', text: 'PK Dunlop', image: '/our-team/3.jpg' },
+  { link: '#', text: 'Kiwi Dog', image: '/our-team/4.png' }
+];
 
 const lato = Lato({ subsets: ["latin"], variable: "--font-lato", weight: ["100", "300", "400", "700", "900"] });
 const workSans = Work_Sans({ subsets: ["latin"], variable: "--font-work-sans"});
@@ -162,7 +168,7 @@ const AboutSection = () => {
 
         <TextReveal>Trusted by medical professionals. Backed by experience. Proven by results.</TextReveal>
 
-        <section>
+        {/* <section>
           <h3 className='text-center uppercase text-3xl font-bold mb-12'>Meet the Team</h3>
           <div
             className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 -mx-12 gap-0 border border-black/10"
@@ -186,6 +192,11 @@ const AboutSection = () => {
               </div>
             ))}
           </div>
+        </section > */}
+
+        <section className="h-[600px] relative -mx-6 md:-mx-12">
+          <h3 className="text-xl mx-6 md:mx-12 inline-block text-black/50 font-medium mb-4 uppercase hover:text-black/70 transition-all duration-300">Meet the Team</h3>
+          <FlowingMenu items={demoItems} />          
         </section>
       </div>
     </main>
