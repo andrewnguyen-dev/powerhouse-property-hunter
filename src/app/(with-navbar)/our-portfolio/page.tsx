@@ -42,6 +42,25 @@ const portfolioItems = [
   },
 ];
 
+const PortfolioSection = () => {
+  // Dynamically split items into two rows
+  const half = Math.ceil(portfolioItems.length / 2);
+  const firstRow = portfolioItems.slice(0, half);
+  const secondRow = portfolioItems.slice(half);
+
+  return (
+    <main id="portfolio" className="section bg-white text-primary">
+      <div className="section-inner">
+        <h1>Portfolio</h1>
+        <div id="portfolio-items" className="flex flex-col gap-4 max-w-full">
+          <CarouselRow items={firstRow} direction={1} speed={60} />
+          <CarouselRow items={secondRow} direction={-1} speed={60} />
+        </div>
+      </div>
+    </main>
+  );
+};
+
 const CarouselRow = ({ items, direction = 1, speed = 60 }: { items: { src: string; href: string }[]; direction?: 1 | -1; speed?: number }) => {
   const rowRef = useRef<HTMLDivElement>(null);
   const x = useRef(0);
@@ -116,25 +135,6 @@ const CarouselRow = ({ items, direction = 1, speed = 60 }: { items: { src: strin
         })}
       </div>
     </div>
-  );
-};
-
-const PortfolioSection = () => {
-  // Dynamically split items into two rows
-  const half = Math.ceil(portfolioItems.length / 2);
-  const firstRow = portfolioItems.slice(0, half);
-  const secondRow = portfolioItems.slice(half);
-
-  return (
-    <main id="portfolio" className="section bg-white text-primary">
-      <div className="section-inner">
-        <h1>Our Portfolio</h1>
-        <div id="portfolio-items" className="flex flex-col gap-4 max-w-full">
-          <CarouselRow items={firstRow} direction={1} speed={60} />
-          <CarouselRow items={secondRow} direction={-1} speed={60} />
-        </div>
-      </div>
-    </main>
   );
 };
 

@@ -66,7 +66,7 @@ const offerings = [
 
 const AboutSection = () => {
   return (
-    <main id="about" className="section bg-white text-primary">
+    <main id="about" className="section">
       <h1>About</h1>
       <div className="section-inner flex flex-col gap-48">
         <section className="flex flex-col lg:flex-row">
