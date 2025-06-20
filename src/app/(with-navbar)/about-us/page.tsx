@@ -41,28 +41,6 @@ const offerings = [
   },
 ]
 
-// const teamMembers = [
-//   {
-//     name: 'Andrew Blake',
-//     position: 'Founder & Lead Buyers Agent',
-//     image: '/our-team/1.jpg',
-//   },
-//   {
-//     name: 'Sarah Lee',
-//     position: 'Senior Property Analyst',
-//     image: '/our-team/2.jpg',
-//   },
-//   {
-//     name: 'Michael Chen',
-//     position: 'Client Relations Manager',
-//     image: '/our-team/3.jpg',
-//   },
-//   {
-//     name: 'Emily Carter',
-//     position: 'Research & Marketing',
-//     image: '/our-team/4.png',
-//   },
-// ];
 
 const AboutSection = () => {
   return (
@@ -123,9 +101,6 @@ const AboutSection = () => {
                     <span className='block mb-3'>
                       Powerhouse Property Hunter is led by Andrew Blake, a highly regarded buyers’ agent with a comprehensive understanding of the healthcare property sector. With a disciplined background as a former elite athlete, Andrew brings a results-focused mindset, a commitment to excellence, and strong industry connections. He is widely recognised for his professionalism, strategic insight, and unwavering dedication to his clients’ success.
                     </span>
-                    <span className='block font-bold'>
-                      Trusted by medical professionals. Backed by experience. Proven by results.
-                    </span>
                   </DialogDescription>
                 </DialogHeader>
               </DialogContent>
@@ -163,32 +138,6 @@ const AboutSection = () => {
         </section>
 
         <TextReveal>Trusted by medical professionals. Backed by experience. Proven by results.</TextReveal>
-
-        {/* <section>
-          <h3 className='text-center uppercase text-3xl font-bold mb-12'>Meet the Team</h3>
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 -mx-12 gap-0 border border-black/10"
-            style={{ borderCollapse: 'collapse' }}
-          >
-            {teamMembers.map((member) => (
-              <div
-                key={member.name}
-                className="flex flex-col items-center border-black/10 border
-                  py-6 bg-white"
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-50 h-50 object-cover mb-4"
-                />
-                <div className="text-center">
-                  <p className="font-bold text-lg">{member.name}</p>
-                  <p className="text-sm text-black/60">{member.position}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section > */}
 
         <section className="h-[600px] relative -mx-6 md:-mx-12">
           <h3 className="text-xl mx-6 md:mx-12 inline-block text-black/50 font-medium mb-4 uppercase hover:text-black/70 transition-all duration-300">Meet the Team</h3>
