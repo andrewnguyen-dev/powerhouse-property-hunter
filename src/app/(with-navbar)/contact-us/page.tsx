@@ -1,6 +1,10 @@
 'use client'
 
 import { useState } from 'react';
+import { MdOutlineEmail } from "react-icons/md";
+import { HiOutlineOfficeBuilding } from "react-icons/hi";
+import { MdOutlinePhone } from "react-icons/md";
+import { FaInstagram } from "react-icons/fa";
 
 const ContactSection = () => {
   const [submitting, setSubmitting] = useState(false);
@@ -100,7 +104,7 @@ const ContactSection = () => {
   return (
     <main id="contact" className="section min-h-screen flex flex-col justify-between">
       <h1>Contact</h1>
-      <div className="section-inner flex flex-col sm:flex-row justify-between items-stretch sm:items-end w-full p-4 gap-12">
+      <div className="section-inner flex flex-col md:flex-row justify-between items-stretch md:items-end w-full p-4 gap-12">
         {/* Contact Form - Top on mobile, left on desktop */}
         <form className="bg-white/80 w-full max-w-md flex flex-col gap-4" onSubmit={handleSubmit} noValidate>
           <label className="flex flex-col text-sm font-medium">
@@ -158,9 +162,37 @@ const ContactSection = () => {
         </form>
 
         {/* Info - Bottom on mobile, right on desktop */}
-        <div className="bg-white/80 p-4 w-full max-w-sm flex flex-col gap-2 text-gray-800 text-left sm:text-right">
-          <h2 className="text-xl font-bold mb-2">Sydney Office</h2>
-          <p>85 William St,<br />Darlinghurst NSW 2010</p>
+        <div className="bg-white/80 p-4 w-full max-w-sm flex flex-col gap-2 text-gray-800 items-start md:items-end">
+          <a
+            href="mailto:a.blake@southernhq.co"
+            className="flex flex-row-center items-center gap-2 hover:underline focus:underline outline-none"
+            aria-label="Send email to a.blake@southernhq.co"
+          >
+            <MdOutlineEmail />
+            <span>a.blake@southernhq.co</span>
+          </a>
+          <a
+            href="tel:0434770307"
+            className="flex flex-row-center items-center gap-2 hover:underline focus:underline outline-none"
+            aria-label="Call 0434 770 307"
+          >
+            <MdOutlinePhone />
+            <span>0434 770 307</span>
+          </a>
+          <a
+            href="https://www.instagram.com/powerhousepropertyhunter/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row-center items-center gap-2 hover:underline focus:underline outline-none"
+            aria-label="Visit Instagram powerhousepropertyhunter"
+          >
+            <FaInstagram />
+            <span>powerhousepropertyhunter</span>
+          </a>
+          <div className='flex flex-row-center items-center gap-2'>
+            <HiOutlineOfficeBuilding />
+            <p>85 William St, Darlinghurst NSW 2010</p>
+          </div>
         </div>
       </div>
     </main>

@@ -1,6 +1,5 @@
 import { Open_Sans } from "next/font/google";
 import { Geologica } from "next/font/google";
-import { Lato } from "next/font/google";
 import "../globals.css";
 import SideNavbar from "@/components/side-navbar";
 
