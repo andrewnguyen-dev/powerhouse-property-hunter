@@ -1,9 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import { FiExternalLink } from "react-icons/fi";
 import { Marquee } from "@/components/magicui/marquee";
-import { cn } from "@/lib/utils";
 
 
 // Portfolio items: combine image and Instagram link

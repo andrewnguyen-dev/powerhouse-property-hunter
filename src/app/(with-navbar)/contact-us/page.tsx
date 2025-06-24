@@ -75,7 +75,7 @@ const ContactSection = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      let json: any = null;
+      let json = null;
       try {
         json = await res.json();
       } catch {}
