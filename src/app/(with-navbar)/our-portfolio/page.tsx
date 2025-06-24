@@ -110,7 +110,7 @@ const PortfolioSection = () => {
   return (
     <main id="portfolio" className="section bg-white text-primary">
       <div className="section-inner">
-        <h1>Our Portfolio</h1>
+        <h1>Portfolio</h1>
         <div className="relative flex w-full max-w-screen overflow-x-hidden flex-col items-center justify-center gap-4">
           <Marquee pauseOnHover className="[--duration:30s] w-full max-w-screen-xl">
             {firstRow.map((item, idx) => (
