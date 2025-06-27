@@ -82,10 +82,10 @@ const AboutSection = () => {
                   <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-black/70 transition-all duration-400 group-hover:w-full"></span>
                 </p>
               </DialogTrigger>
-              <DialogContent>
+              <DialogContent className="max-w-[calc(100%-2rem)]">
                 <DialogHeader>
                   <DialogTitle></DialogTitle>
-                  <DialogDescription className='text-md text-black/90 p-4'>
+                  <DialogDescription className='text-md text-black/90 p-4 max-h-[60vh] overflow-auto dialog-scrollbar text-left'>
                     <span className='block mb-3'>
                       At Powerhouse Property Hunter, we specialise in assisting medical professionals to achieve their business and lifestyle objectives with clarity, confidence, and efficiency. Whether you are expanding your practice, acquiring your first premises, or building a strategic property portfolio, we provide expert guidance and tangible results.
                     </span>

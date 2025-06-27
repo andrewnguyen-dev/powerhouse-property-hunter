@@ -187,3 +187,18 @@ h1 {
 .form-underline-input-error {
   @apply border-b-red-500;
 }
+
+.dialog-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.dialog-scrollbar::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 8px;
+}
+.dialog-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dialog-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #bdbdbd transparent;
+}
