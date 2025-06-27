@@ -1,4 +1,5 @@
 import { ViewTransitions } from "next-view-transitions"
+import { Analytics } from "@vercel/analytics/next"
 
 export default function RootLayout({
   children,
@@ -8,6 +9,7 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       {children}
+      <Analytics />
     </ViewTransitions>
   );
 }
