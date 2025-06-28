@@ -57,7 +57,7 @@ const AboutSection = () => {
                 className="max-w-1/2 lg:max-w-full aspect-square object-cover rounded-xs filter grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
               />
             </div>
-            <div className='flex flex-col order-first lg:order-last justify-center items-center'>
+            <div className='flex flex-col justify-center items-center'>
               <p className='uppercase font-bold text-black/70 text-center'>Andrew Blake</p>
               <ul className='text-black/50 text-sm'>
                 <li><span className="mr-2">•</span>Diploma of Design & Architecture at UTS</li>
