@@ -10,23 +10,34 @@ const oswald = Oswald({ subsets: ["latin"] });
 
 const HeroSection = () => {
   const router = useTransitionRouter();
-  const [loading, setLoading] = useState(true);
-  const [showPreloader, setShowPreloader] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [showPreloader, setShowPreloader] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000);
-    return () => clearTimeout(timer);
+    // Only show preloader if not visited before
+    const hasVisited = typeof window !== 'undefined' && localStorage.getItem('hasVisited');
+    if (!hasVisited) {
+      setLoading(true);
+      setShowPreloader(true);
+      const timer = setTimeout(() => setLoading(false), 1000);
+      return () => clearTimeout(timer);
+    }
+    // If already visited, skip preloader
+    setLoading(false);
+    setShowPreloader(false);
   }, []);
 
   // When loading becomes false, wait for fade-out before unmounting Preloader
   useEffect(() => {
-    if (!loading) {
+    if (!loading && showPreloader) {
+      // Set flag so preloader won't show again
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('hasVisited', 'true');
+      }
       const timeout = setTimeout(() => setShowPreloader(false), 1000); // match fade duration
       return () => clearTimeout(timeout);
-    } else {
-      setShowPreloader(true);
     }
-  }, [loading]);
+  }, [loading, showPreloader]);
 
   return (
     <>
