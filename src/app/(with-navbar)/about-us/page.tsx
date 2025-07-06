@@ -13,11 +13,10 @@ import Marquee from "react-fast-marquee";
 import FlowingMenu from "@/components/react-bits/flowing-menu";
 import { TextReveal } from "@/components/magicui/text-reveal";
 
-const demoItems = [
-  { link: '#', text: 'Andrew | CEO', image: '/our-team/1.jpg' },
-  { link: '#', text: 'Anita Wood', image: '/our-team/2.jpg' },
-  { link: '#', text: 'PK Dunlop', image: '/our-team/3.jpg' },
-  { link: '#', text: 'Kiwi Dog', image: '/our-team/4.png' }
+const teamMembers = [
+  { name: 'Andrew', image: '/our-team/1.jpg' },
+  { name: 'Anita Wood', image: '/our-team/2.jpg' },
+  { name: 'Kiwi Dog', image: '/our-team/3.png' }
 ];
 
 const alegreya = Alegreya({ subsets: ["latin"], style: ["normal","italic"] });
@@ -52,7 +51,7 @@ const AboutSection = () => {
           <div className='flex-1 flex order-last lg:order-first flex-col gap-4 p-12 border border-black/10 -mx-6 md:-mx-12 lg:mr-0 hover:bg-gray-50 transition-all duration-300'>
             <div className=" overflow-hidden rounded-xs flex justify-center items-center">
               <img
-                src="/andrew-profile-picture-2.jpg"
+                src="/andrew-profile-picture.jpg"
                 alt="Andrew profile"
                 className="max-w-1/2 lg:max-w-full aspect-square object-cover rounded-xs filter grayscale hover:grayscale-0 transition-all duration-300 hover:scale-105"
               />
@@ -69,7 +68,7 @@ const AboutSection = () => {
           {/* Hero text container */}
           <div className="flex-3 xl:flex-2 flex flex-col justify-center items-center gap-12 p-12 border-b border-t border-r border-black/10 -mx-6 md:-mx-12 lg:ml-0 hover:bg-gray-50 transition-all duration-300">
             <p className={`${alegreya.className} text-5xl xl:text-6xl/15 font-medium tracking-tight`}>
-              At Powerhouse Property Hunter our mission is to curate the right mix of <span className='low-highlight'>Medical, Healthcare & Wellness</span> properties and deliver
+              At Powerhouse Property Hunter our mission is to curate the right mix of <span className='low-highlight'>Tourism, Wellness, Fitness, Life Science and Medical</span> properties and deliver
               expert buyer agency services tailored to your goals.
             </p>
             <Dialog>
@@ -87,13 +86,13 @@ const AboutSection = () => {
                   <DialogTitle></DialogTitle>
                   <DialogDescription className='text-md text-black/90 p-4 max-h-[60vh] overflow-auto dialog-scrollbar text-left'>
                     <span className='block mb-3'>
-                      At Powerhouse Property Hunter, we specialise in assisting medical professionals to achieve their business and lifestyle objectives with clarity, confidence, and efficiency. Whether you are expanding your practice, acquiring your first premises, or building a strategic property portfolio, we provide expert guidance and tangible results.
+                      At Powerhouse Property Hunter, we specialise in assisting tourism, wellness, fitness, life science and medical professionals to achieve their business and lifestyle objectives with clarity, confidence, and efficiency. Whether you are expanding your practice, acquiring your first premises, or building a strategic property portfolio, we provide expert guidance and tangible results.
                     </span>
                     <span className='block mb-3'>
                       We believe that property should serve as a catalyst—not a constraint—for success. Our bespoke property solutions are designed to accelerate growth, protect your time, and align with your broader financial and professional goals.
                     </span>
                     <span className='block mb-3'>
-                      Collaborating closely with medical practitioners and their trusted advisers—including accountants, brokers, and financial consultants—we deliver intelligent, strategic property outcomes tailored to your unique circumstances.
+                      Collaborating closely with professionals, practitioners and their trusted advisers—including accountants, brokers, and financial consultants—we deliver intelligent, strategic property outcomes tailored to your unique circumstances.
                     </span>
                     <span className='block mb-3'>
                       With decades of experience navigating the intricacies of the property market, we transform complex challenges into value-driven opportunities. From site identification and acquisition through to negotiation and execution, we support you at every stage of the process.
@@ -137,11 +136,34 @@ const AboutSection = () => {
           </div>
         </section>
 
-        <TextReveal>Trusted by medical professionals. Backed by experience. Proven by results.</TextReveal>
+        <TextReveal>Tourism, Wellness, Fitness, Life Science and Medical professionals</TextReveal>
 
-        <section className="h-[600px] relative -mx-6 md:-mx-12">
+        {/* <section className="h-[600px] relative -mx-6 md:-mx-12">
           <h3 className="text-xl mx-6 md:mx-12 inline-block text-black/50 font-medium mb-4 uppercase hover:text-black/70 transition-all duration-300">Meet the Team</h3>
           <FlowingMenu items={demoItems} />          
+        </section> */}
+        <section>
+          <h3 className="text-xl inline-block text-black/50 font-medium mb-4 uppercase hover:text-black/70 transition-all duration-300">Meet the Team</h3>
+          <div
+            className="flex flex-col lg:flex-row w-full"
+          >
+            {teamMembers.map((member, idx) => (
+              <div
+                key={member.name}
+                className="flex flex-col gap-4 p-8 border border-black/10 hover:bg-gray-50 transition-all duration-300 items-center justify-center"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="relative z-10 w-40 h-40 lg:w-56 lg:h-56 object-cover"
+                  style={{ borderRadius: 0, boxShadow: '0 4px 24px 0 rgba(0,0,0,0.04)' }}
+                />
+                <span className="font-semibold uppercase">
+                  {member.name}
+                </span>
+              </div>
+            ))}
+          </div>
         </section>
       </div>
     </main>
