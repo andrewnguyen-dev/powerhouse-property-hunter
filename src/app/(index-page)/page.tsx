@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import { useEffect, useState } from 'react';
 import Preloader from '@/components/Preloader';
@@ -42,21 +43,32 @@ const HeroSection = () => {
   return (
     <>
       {showPreloader && <Preloader fadeOut={!loading} />}
-      <section id="hero" className="bg-black/90 text-white h-screen relative">
+      <section
+        id="hero"
+        className="relative h-screen text-white"
+        style={{
+          backgroundImage: 'url(/bg.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/60 pointer-events-none z-0" />
+
         {/* Logo at top left */}
-        <div className="w-24 h-24 flex items-center justify-center absolute top-12 left-12 overflow-hidden">
-          <Image
-            src="/logo-pph.png"
-            alt="PPH Logo"
-            fill
-            style={{ objectFit: 'contain' }}
-            draggable={false}
-            priority
-          />
+        <div className='flex pt-12 pl-12'>
+          <div className="flex items-center justify-center overflow-hidden z-10">
+            <img
+              src="/logo-pph-with-text.png"
+              alt="PPH Logo"
+              style={{ objectFit: 'contain' }}
+              className="h-24"
+            />
+          </div>
         </div>
 
         {/* Nav at bottom left */}
-        <nav className={`absolute bottom-12 left-12 ${oswald.className} font-bold`}>
+        <nav className={`absolute bottom-12 left-12 ${oswald.className} font-bold z-10`}>
           <ul className="flex flex-col w-full">
             {navLinks.map((link) => (
               <li key={link.href} className="w-full">
