@@ -62,14 +62,15 @@ const AboutSection = () => {
                 <li><span className="mr-2">•</span>Diploma of Design & Architecture at UTS</li>
                 <li><span className="mr-2">•</span>Master of Property Development API</li>
                 <li><span className="mr-2">•</span>Real Estate Agent Class 1</li>
+                <li><span className="mr-2">•</span>Stock & Station Agency</li>
               </ul>
             </div>
           </div>
           {/* Hero text container */}
           <div className="flex-3 xl:flex-2 flex flex-col justify-center items-center gap-12 p-12 border-b border-t border-r border-black/10 -mx-6 md:-mx-12 lg:ml-0 hover:bg-gray-50 transition-all duration-300">
             <p className={`${alegreya.className} text-5xl xl:text-6xl/15 font-medium tracking-tight`}>
-              At Powerhouse Property Hunter our mission is to curate the right mix of <span className='low-highlight'>Tourism, Wellness, Fitness, Life Science and Medical</span> properties and deliver
-              expert buyer agency services tailored to your goals.
+              Powerhouse Property Hunter delivers expert buyer representation, helping professionals and investors secure <span className='low-highlight'>strategic estates, agricultural, medical, and lifestyle properties</span> that drive 
+              growth and fulfill both business and lifestyle aspirations.
             </p>
             <Dialog>
               <DialogTrigger className='self-start'>
@@ -86,19 +87,16 @@ const AboutSection = () => {
                   <DialogTitle></DialogTitle>
                   <DialogDescription className='text-md text-black/90 p-4 max-h-[60vh] overflow-auto dialog-scrollbar text-left'>
                     <span className='block mb-3'>
-                      At Powerhouse Property Hunter, we specialise in assisting tourism, wellness, fitness, life science and medical professionals to achieve their business and lifestyle objectives with clarity, confidence, and efficiency. Whether you are expanding your practice, acquiring your first premises, or building a strategic property portfolio, we provide expert guidance and tangible results.
+                      At Powerhouse Property Hunter, we specialise in the property sectors we know intimately—those we actively invest in and are genuinely passionate about. Our expertise spans country estates, regenerative and large-scale agricultural holdings, tourism destinations, wellness and fitness facilities, and medical properties. We guide our clients to achieve their business and lifestyle ambitions with clarity, confidence, and efficiency.
                     </span>
                     <span className='block mb-3'>
-                      We believe that property should serve as a catalyst—not a constraint—for success. Our bespoke property solutions are designed to accelerate growth, protect your time, and align with your broader financial and professional goals.
+                      Whether you are downsizing, expanding your footprint, acquiring your first practice, or building a strategic property portfolio, we deliver expert guidance and measurable results. We believe property should act as a catalyst for growth, not a constraint, and our bespoke solutions are tailored to protect your time, accelerate your success, and align seamlessly with your financial and professional ambitions.
                     </span>
                     <span className='block mb-3'>
-                      Collaborating closely with professionals, practitioners and their trusted advisers—including accountants, brokers, and financial consultants—we deliver intelligent, strategic property outcomes tailored to your unique circumstances.
+                      We collaborate closely with professionals, practitioners, and their trusted advisers—including accountants, brokers, and financial consultants—to provide intelligent, strategic property outcomes that reflect your unique objectives. From site identification and acquisition through to negotiation and execution, we simplify complexity and transform challenges into value-driven opportunities.
                     </span>
                     <span className='block mb-3'>
-                      With decades of experience navigating the intricacies of the property market, we transform complex challenges into value-driven opportunities. From site identification and acquisition through to negotiation and execution, we support you at every stage of the process.
-                    </span>
-                    <span className='block mb-3'>
-                      Powerhouse Property Hunter is led by Andrew Blake, a highly regarded buyers’ agent with a comprehensive understanding of the healthcare property sector. With a disciplined background as a former elite athlete, Andrew brings a results-focused mindset, a commitment to excellence, and strong industry connections. He is widely recognised for his professionalism, strategic insight, and unwavering dedication to his clients’ success.
+                      Powerhouse Property Hunter is led by Andrew Blake, a highly regarded buyers’ agent with a trans-Tasman perspective, splitting his time between Australia and New Zealand. Born to a New Zealand–Australian family, Andrew combines a disciplined mindset honed as a former elite athlete with deep property market expertise. His own portfolio—spanning farming, medical, fitness, and lifestyle investments—reflects his focus on high-potential niche sectors. Recognised for his strategic insight, industry connections, and unwavering commitment to client success, Andrew ensures every acquisition is both purposeful and profitable.
                     </span>
                   </DialogDescription>
                 </DialogHeader>
@@ -136,7 +134,7 @@ const AboutSection = () => {
           </div>
         </section>
 
-        <TextReveal>Tourism, Wellness, Fitness, Life Science and Medical professionals</TextReveal>
+        <TextReveal>Our expertise spans country estates, regenerative, major agricultural properties, tourism destinations, wellness facilities, and medical sites.</TextReveal>
 
         {/* <section className="h-[600px] relative -mx-6 md:-mx-12">
           <h3 className="text-xl mx-6 md:mx-12 inline-block text-black/50 font-medium mb-4 uppercase hover:text-black/70 transition-all duration-300">Meet the Team</h3>

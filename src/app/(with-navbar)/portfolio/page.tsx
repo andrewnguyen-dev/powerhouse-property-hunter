@@ -78,6 +78,46 @@ const portfolioItems = [
     src: "/portfolio/18.jpg",
     href: "https://instagram.com/thread/8",
   },
+  {
+    src: "/portfolio/19.png",
+    href: "https://instagram.com/thread/8",
+  },
+  {
+    src: "/portfolio/20.png",
+    href: "https://instagram.com/thread/8",
+  },
+  {
+    src: "/portfolio/21.png",
+    href: "https://instagram.com/thread/8",
+  },
+  {
+    src: "/portfolio/22.png",
+    href: "https://instagram.com/thread/8",
+  },
+  {
+    src: "/portfolio/23.png",
+    href: "https://instagram.com/thread/8",
+  },
+  {
+    src: "/portfolio/24.png",
+    href: "https://instagram.com/thread/8",
+  },
+  {
+    src: "/portfolio/25.png",
+    href: "https://instagram.com/thread/8",
+  },
+  {
+    src: "/portfolio/26.png",
+    href: "https://instagram.com/thread/8",
+  },
+  {
+    src: "/portfolio/27.png",
+    href: "https://instagram.com/thread/8",
+  },
+  {
+    src: "/portfolio/28.png",
+    href: "https://instagram.com/thread/8",
+  },
 ];
 
 
@@ -114,16 +154,39 @@ const PortfolioSection = () => {
         <div className="relative flex w-full max-w-screen overflow-x-hidden flex-col items-center justify-center gap-4">
           <Marquee pauseOnHover className="[--duration:30s] w-full max-w-screen-xl">
             {firstRow.map((item, idx) => (
-              <PortfolioCard key={item.src} src={item.src} href={item.href} alt={`Portfolio ${idx + 1}`} />
+              <PortfolioCard key={item.src} src={item.src} href="#" alt={`Portfolio ${idx + 1}`} />
             ))}
           </Marquee>
           <Marquee reverse pauseOnHover className="[--duration:30s] w-full max-w-screen-xl">
             {secondRow.map((item, idx) => (
-              <PortfolioCard key={item.src} src={item.src} href={item.href} alt={`Portfolio ${half + idx + 1}`} />
+              <PortfolioCard key={item.src} src={item.src} href="#" alt={`Portfolio ${half + idx + 1}`} />
             ))}
           </Marquee>
           {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/8 bg-gradient-to-r from-background"></div>
           <div className="pointer-events-none absolute inset-y-0 right-0 w-1/8 bg-gradient-to-l from-background"></div> */}
+        </div>
+        <div className="mt-32">
+          <h2 className="text-4xl font-bold uppercase mb-6">Past History</h2>
+          <ul>
+            <li><span className="mr-2">•</span>Paddington House - $2,823,000</li>
+            <li><span className="mr-2">•</span>Randwick Medical - $1,407,000</li>
+            <li><span className="mr-2">•</span>Point Piper Apartment - $3,212,000</li>
+            <li><span className="mr-2">•</span>Edgecliff House - $5,836,000</li>
+            <li><span className="mr-2">•</span>45 Industrial Strata Sheds - $33,750,000 (combined)</li>
+            <li><span className="mr-2">•</span>Farm - 8,648 acres - $35,653,000</li>
+            <li><span className="mr-2">•</span>Land Development - 2,225 lots - $32,200,000</li>
+            <li><span className="mr-2">•</span>Winery - Hunter Valley - $15,888,000</li>
+            <li><span className="mr-2">•</span>Robertson - 200 acres - $7,212,000</li>
+            <li><span className="mr-2">•</span>Luggate – 19 acres - $1,325,000</li>
+            <li><span className="mr-2">•</span>Industrial Land - $12,300,120</li>
+            <li><span className="mr-2">•</span>Tumut - 300 acres - $1,500,000</li>
+            <li><span className="mr-2">•</span>Robertson - 101 acres - $6,130,000</li>
+            <li><span className="mr-2">•</span>Orchad Hills - $22,000,000</li>
+            <li><span className="mr-2">•</span>Goulburn - 400 acrea - $6,560,000</li>
+            <li><span className="mr-2">•</span>Potts Pott - Commercial Fitness - $1,201,000</li>
+            <li><span className="mr-2">•</span>Robertson – House Estate - $2,980,000</li>
+            <li><span className="mr-2">•</span>Wanaka - Commercial - $350,000</li>
+          </ul>
         </div>
       </div>
     </main>

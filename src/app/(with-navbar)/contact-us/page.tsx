@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { MdOutlineEmail } from "react-icons/md";
-import { HiOutlineOfficeBuilding } from "react-icons/hi";
+import { MdOutlinePlace } from "react-icons/md";
 import { MdOutlinePhone } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa";
 
@@ -190,8 +190,12 @@ const ContactSection = () => {
             <span>powerhousepropertyhunter</span>
           </a>
           <div className='flex flex-row-center items-center gap-2'>
-            <HiOutlineOfficeBuilding />
-            <p>85 William St, Darlinghurst NSW 2010</p>
+            <MdOutlinePlace />
+            <p>New South Wales, Australia</p>
+          </div>
+          <div className='flex flex-row-center items-center gap-2'>
+            <MdOutlinePlace />
+            <p>Wanaka, New Zealand</p>
           </div>
         </div>
       </div>
