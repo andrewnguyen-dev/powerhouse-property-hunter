@@ -7,11 +7,11 @@ import { Marquee } from "@/components/magicui/marquee";
 // Portfolio items: combine image and Instagram link
 const portfolioItems = [
   {
-    src: "/portfolio/01.jpg",
+    src: "/portfolio/02.jpg",
     href: "https://instagram.com/thread/1",
   },
   {
-    src: "/portfolio/03.jpg",
+    src: "/portfolio/04.jpg",
     href: "https://instagram.com/thread/3",
   },
   {
