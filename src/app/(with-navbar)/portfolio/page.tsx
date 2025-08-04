@@ -11,16 +11,8 @@ const portfolioItems = [
     href: "https://instagram.com/thread/1",
   },
   {
-    src: "/portfolio/02.jpg",
-    href: "https://instagram.com/thread/2",
-  },
-  {
     src: "/portfolio/03.jpg",
     href: "https://instagram.com/thread/3",
-  },
-  {
-    src: "/portfolio/04.jpg",
-    href: "https://instagram.com/thread/4",
   },
   {
     src: "/portfolio/05.png",

@@ -55,19 +55,28 @@ const HeroSection = () => {
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/60 pointer-events-none z-0" />
 
-        {/* Logo at top left */}
-        <div className='flex pt-12 pl-12'>
+        {/* Top bar: logo (left) and ANZ map (right) */}
+        <div className="flex flex-col gap-6 sm:flex-row justify-between items-start pt-12 px-12 w-full">
+          {/* Logo at top left */}
           <div className="flex items-center justify-center overflow-hidden z-10">
             <img
               src="/logo-pph-with-text.png"
               alt="PPH Logo"
               style={{ objectFit: 'contain' }}
-              className="h-24"
+              className="h-20"
+            />
+          </div>
+          {/* ANZ map at top right */}
+          <div className="z-10">
+            <img
+              src="/anz-map-outline.png"
+              alt="ANZ Map Outline"
+              className="h-16 sm:h-20 w-auto object-contain"
             />
           </div>
         </div>
 
-        {/* Nav at bottom left */}
+        {/* Nav items at bottom left */}
         <nav className={`absolute bottom-12 left-12 ${oswald.className} font-bold z-10`}>
           <ul className="flex flex-col w-full">
             {navLinks.map((link) => (
