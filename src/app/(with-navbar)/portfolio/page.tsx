@@ -15,51 +15,51 @@ const portfolioItems = [
     href: "https://instagram.com/thread/3",
   },
   {
-    src: "/portfolio/05.png",
+    src: "/portfolio/05.jpg",
     href: "https://instagram.com/thread/5",
   },
   {
-    src: "/portfolio/06.png",
+    src: "/portfolio/06.jpg",
     href: "https://instagram.com/thread/6",
   },
   {
-    src: "/portfolio/07.png",
+    src: "/portfolio/07.jpg",
     href: "https://instagram.com/thread/7",
   },
   {
-    src: "/portfolio/08.png",
+    src: "/portfolio/08.jpg",
     href: "https://instagram.com/thread/8",
   },
   {
-    src: "/portfolio/09.png",
+    src: "/portfolio/09.jpg",
     href: "https://instagram.com/thread/1",
   },
   {
-    src: "/portfolio/10.png",
+    src: "/portfolio/10.jpg",
     href: "https://instagram.com/thread/2",
   },
   {
-    src: "/portfolio/11.png",
+    src: "/portfolio/11.jpg",
     href: "https://instagram.com/thread/3",
   },
   {
-    src: "/portfolio/12.png",
+    src: "/portfolio/12.jpg",
     href: "https://instagram.com/thread/4",
   },
   {
-    src: "/portfolio/13.png",
+    src: "/portfolio/13.jpg",
     href: "https://instagram.com/thread/5",
   },
   {
-    src: "/portfolio/14.png",
+    src: "/portfolio/14.jpg",
     href: "https://instagram.com/thread/6",
   },
   {
-    src: "/portfolio/15.png",
+    src: "/portfolio/15.jpg",
     href: "https://instagram.com/thread/7",
   },
   {
-    src: "/portfolio/16.png",
+    src: "/portfolio/16.jpg",
     href: "https://instagram.com/thread/8",
   },
   {
@@ -71,43 +71,43 @@ const portfolioItems = [
     href: "https://instagram.com/thread/8",
   },
   {
-    src: "/portfolio/19.png",
+    src: "/portfolio/19.jpg",
     href: "https://instagram.com/thread/8",
   },
   {
-    src: "/portfolio/20.png",
+    src: "/portfolio/20.jpg",
     href: "https://instagram.com/thread/8",
   },
   {
-    src: "/portfolio/21.png",
+    src: "/portfolio/21.jpg",
     href: "https://instagram.com/thread/8",
   },
   {
-    src: "/portfolio/22.png",
+    src: "/portfolio/22.jpg",
     href: "https://instagram.com/thread/8",
   },
   {
-    src: "/portfolio/23.png",
+    src: "/portfolio/23.jpg",
     href: "https://instagram.com/thread/8",
   },
   {
-    src: "/portfolio/24.png",
+    src: "/portfolio/24.jpg",
     href: "https://instagram.com/thread/8",
   },
   {
-    src: "/portfolio/25.png",
+    src: "/portfolio/25.jpg",
     href: "https://instagram.com/thread/8",
   },
   {
-    src: "/portfolio/26.png",
+    src: "/portfolio/26.jpg",
     href: "https://instagram.com/thread/8",
   },
   {
-    src: "/portfolio/27.png",
+    src: "/portfolio/27.jpg",
     href: "https://instagram.com/thread/8",
   },
   {
-    src: "/portfolio/28.png",
+    src: "/portfolio/28.jpg",
     href: "https://instagram.com/thread/8",
   },
 ];
